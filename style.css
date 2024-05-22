@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+header {
+    background-color: rgb(201, 61, 61);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 15px;
+}
+
+.flex-container .flex-item {
+    color: white;
+}
+
+nav img {
+    width: 80px;
+}
+
+body {
+    background-color: white;
+}
+
+h1,
+h2,
+p {
+    text-align: center;
+    padding: 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.774);
+}
+
+.card img {
+    height: 400px;
+    width: 425px;
+}
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.card .card-content .price {
+    color: red;
+    font-size: 18px;
+}
+
+.card .button-hover-background {
+    background-color: rgb(29, 29, 224);
+    border-radius: 15px;
+    cursor: pointer;
+    height: 35px;
+    width: 160px;
+}
+
+.card button:hover {
+    background-color: rgb(41, 148, 41);
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-head-item {
+    text-align: start;
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.first-col,
+.second-col,
+.third-col {
+    width: 26%;
+}
+
+.product-identification {
+    display: flex;
+    align-items: center;
+}
+
+.product-quantity {
+    width: 48px;
+    height: 34px;
+    border-radius: 6px;
+    border: 2px solid var(--blue);
+    text-align: center;
+    background: #eee;
+}
+
+.remove-product-button {
+    margin-left: 12px;
+    background: #ff0000;
+    color: white;
+    padding: 10px 8px;
+    border: 0;
+    border-radius: 6px;
+
+    transition: filter 0.2s;
+}
+
+
+.remove-product-button:hover {
+    filter: brightness(0.8);
+}
+
+.purchase-button {
+    display: flex;
+    margin: 24px auto 0;
+    background-color: blue;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    padding: 16px 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: filter 0.2s;
+}
+
+.purchase-button:hover {
+    filter: brightness(0.8);
+}
+
+footer {
+    background-color: rgb(201, 61, 61);
+}

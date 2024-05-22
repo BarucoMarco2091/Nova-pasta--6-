@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Loja de games</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="flex-container">
+                <img src="images/logo.png" alt="">
+                <li>
+                    <a class="flex-item" href="#">Home</a>
+                </li>
+                <li>
+                    <a class="flex-item" href="#">Games</a>
+                </li>
+                <li>
+                    <a class="flex-item" href="#">Videogames</a>
+                </li>
+                <li>
+                    <a class="flex-item" href="#">Brinquedos</a>
+                </li>
+                <li>
+                    <a class="flex-item" href="#">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Produtos em destaque</h1>
+        <section class="destaque">
+            <div class="card-grid">
+                <div class="card">
+                    <img src="images/supernintendo.jpg" alt="">
+                    <div class="card-content">
+                        <p class="product-title">Snes</p>
+                        <p class="product-price">R$ 400,00</p>
+                        <button type="button" class="button-hover-background">Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/luigi.jpg" alt="">
+                    <div class="card-content">
+                        <p class="product-title">Boneco do Luigi</p>
+                        <p class="product-price">R$ 250,00</p>
+                        <button type="button" class="button-hover-background">Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/cartucho.jpg" alt="">
+                    <div class="card-content">
+                        <p class="product-title">Cartuchos do snes</p>
+                        <p class="product-price">R$ 600,00</p>
+                        <button type="button" class="button-hover-background">Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/supernintendo.jpg" alt="">
+                    <div class="card-content">
+                        <p class="product-title">Super nintendo</p>
+                        <p class="product-price">R$ 1600,00</p>
+                        <button type="button" class="button-hover-background">Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/wiiu.jpg" alt="">
+                    <div class="card-content">
+                        <p class="product-title">Wii U</p>
+                        <p class="product-price">R$ 5000,00</p>
+                        <button type="button" class="button-hover-background">Adicionar no carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h2>Carrinho</h2>
+
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th class="table-head-item first-col">Item</th>
+                    <th class="table-head-item second-col">Preço</th>
+                    <th class="table-head-item third-col">Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+             <!--  <tr class="cart-product">
+                    <td class="product-identification">
+                        <strong class="cart-product-title">Super nintendo</strong>
+                    </td>
+                    <td>
+                        <span class="cart-product-price">R$ 600,00</span>
+                    </td>
+                    <td>
+                        <input type="number" value="1" min="0" class="product-qtd-input">
+                        <button type="button" class="remove-product-button">Remover</button>
+                    </td>
+                </tr> --> 
+            </tbody>
+            <tfoot>
+               <tr>
+                    <td colspan="3" class="cart-total-container">
+                        <strong>Total: </strong>
+                        <span>R$ 0,00</span>
+                    </td>
+                </tr> 
+            </tfoot>
+        </table>
+        <button type="button" class="purchase-button">Finalizar compra</button>
+    </main>
+    <footer>
+        <p>Desenvolvido por Marco</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
