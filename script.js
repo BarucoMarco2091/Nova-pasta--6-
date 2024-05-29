@@ -116,15 +116,23 @@ function updateTotal() {
     document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount
 }
 
+// animações
 ScrollReveal().reveal('.flex-container',{
     origin: 'right',
     duration: 3000,
     distance: '20%'
 })
 
-
 ScrollReveal().reveal('.card-grid',{
     origin: 'left',
     duration: 2000,
     distance: '20%'
 })
+
+ScrollReveal().reveal('.cart-table',{
+    origin: 'left',
+    duration: 2000,
+    distance: '20%'
+})
+
+
