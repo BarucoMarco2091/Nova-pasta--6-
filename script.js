@@ -7,22 +7,23 @@ if (document.readyState === "loading") {
 var totalAmount = "0,00"
 
 function ready() {
-    const removeProductButtons = document.getElementsByClassName("remove-product-button")
+    // botão remover produto
+    const removeCartProductButtons = document.getElementsByClassName("remove-product-button")
 
-    for (var i = 0; i < removeProductButtons.length; i++) {
-        removeProductButtons[i].addEventListener("click", removeProduct)
+    for (var i = 0; i < removeCartProductButtons.length; i++) {
+        removeCartProductButtons[i].addEventListener("click", removeProduct)
     }
-
+    // mudança valor dos inputs
     const quantityInputs = document.getElementsByClassName("product-qtd-input")
     for (var i = 0; i < quantityInputs.length; i++) {
-        quantityInputs[i].addEventListener("change", checkIfInputIsNull)
+        quantityInputs[i].addEventListener("change", updateTotal)
     }
-
+    // botão add produto ao carrinho
     const addToCartButtons = document.getElementsByClassName("button-hover-background")
     for (var i = 0; i < addToCartButtons.length; i++) {
         addToCartButtons[i].addEventListener("click", addProductToCart)
     }
-
+    // botão comprar
     const purchaseButton = document.getElementsByClassName("purchase-button")[0]
     purchaseButton.addEventListener("click", makePurchase)
 
@@ -46,11 +47,11 @@ function makePurchase() {
 }
 
 function checkIfInputIsNull(event) {
-    console.log(event.target)
+    
     if (event.target.value === "0") {
         event.target.parentElement.parentElement.remove()
     }
-    updateTotal
+    updateTotal()
 
 }
 
@@ -87,7 +88,7 @@ function addProductToCart(event) {
     tableBody.append(newCartProduct)
 
     updateTotal()
-    console.log(newCartProduct)
+    
     newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfInputIsNull)
     newCartProduct.getElementsByClassName("remove-product-button")[0].addEventListener("click", removeProduct)
 }
@@ -97,15 +98,17 @@ function removeProduct(event) {
     updateTotal()
 }
 
+// atualizar o valor total do carrinho
 function updateTotal() {
-    totalAmount = 0
+    
     const cartProducts = document.getElementsByClassName("cart-product")
+    totalAmount = 0
     for (var i = 0; i < cartProducts.length; i++) {
         //console.log(cartProducts[i])
         const productPrice = cartProducts[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$", "").replace(",", ".")
         const productQuantity = cartProducts[i].getElementsByClassName("product-qtd-input")[0].value
 
-        totalAmount += (productPrice * productQuantity)
+        totalAmount += productPrice * productQuantity
     }
 
     totalAmount = totalAmount.toFixed(2)
@@ -113,4 +116,15 @@ function updateTotal() {
     document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount
 }
 
+ScrollReveal().reveal('.flex-container',{
+    origin: 'right',
+    duration: 3000,
+    distance: '20%'
+})
 
+
+ScrollReveal().reveal('.card-grid',{
+    origin: 'left',
+    duration: 2000,
+    distance: '20%'
+})
